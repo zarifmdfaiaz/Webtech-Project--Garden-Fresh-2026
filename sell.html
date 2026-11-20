@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Fresh | Sell Fruits</title>
+    
+<link rel="icon" type="image/png" href="css/image/garden-fresh-logo.png">
+
+    <link rel="stylesheet" href="css/01-base.css">
+<link rel="stylesheet" href="css/02-header-nav.css">
+<link rel="stylesheet" href="css/03-buttons.css">
+<link rel="stylesheet" href="css/04-home.css">
+<link rel="stylesheet" href="css/05-fruit-cards.css">
+<link rel="stylesheet" href="css/06-forms-filter.css">
+<link rel="stylesheet" href="css/07-cart.css">
+<link rel="stylesheet" href="css/08-payment.css">
+<link rel="stylesheet" href="css/09-content.css">
+<link rel="stylesheet" href="css/10-contact.css">
+<link rel="stylesheet" href="css/11-about.css">
+<link rel="stylesheet" href="css/12-footer.css">
+<link rel="stylesheet" href="css/13-responsive.css">
+<link rel="stylesheet" href="css/14-logo.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/sell.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+           
+<a class="logo" href="index.html" aria-label="Garden Fresh Home">
+    <img src="css/image/garden-fresh-logo.png" alt="Garden Fresh Logo">
+    <span>Garden Fresh</span>
+</a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="buy.html">Buy Fruits</a>
+                <a class="active" href="sell.html">Sell Fruits</a>
+                <a href="cart.html">Cart</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div class="section-heading">
+            <h1>Sell Your Fruits</h1>
+            <p>Enter the details below to add your fruit to the current listing.</p>
+        </div>
+
+        <!-- PHP: handle this form later -->
+        <form id="sellForm" class="form-card" method="post" action=""
+              onsubmit="return checkSellForm()">
+            <fieldset>
+                <legend>Fruit Information</legend>
+
+                <div class="form-group">
+                    <label for="fruitName">Fruit name *</label>
+                    <input type="text" id="fruitName" name="fruit_name">
+                    <span class="error" id="fruitNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category *</label>
+                    <select id="category" name="category">
+                        <option value="">Choose a category</option>
+                        <option value="Citrus">Citrus</option>
+                        <option value="Tropical">Tropical</option>
+                        <option value="Berries">Berries</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="error" id="categoryError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity (kg) *</label>
+                    <input type="number" id="quantity" name="quantity" min="1">
+                    <span class="error" id="quantityError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Asking price (Tk per kg) *</label>
+                    <input type="number" id="price" name="price" min="0" step="0.01">
+                    <span class="error" id="priceError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                    <span class="error" id="descriptionError"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Seller Information</legend>
+
+                <div class="form-group">
+                    <label for="sellerName">Seller name *</label>
+                    <input type="text" id="sellerName" name="seller_name">
+                    <span class="error" id="sellerNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone number *</label>
+                    <input type="text" id="phone" name="phone">
+                    <span class="error" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="sellerEmail">Email address *</label>
+                    <input type="email" id="sellerEmail" name="seller_email">
+                    <span class="error" id="sellerEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" name="location">
+                    <span class="error" id="locationError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fruitPicture">Fruit picture *</label>
+                    <input type="file" id="fruitPicture" name="fruit_picture"
+                           accept="image/*">
+                    <span class="error" id="pictureError"></span>
+                    <img id="picturePreview" class="picture-preview"
+                         alt="Preview of the selected fruit">
+                </div>
+            </fieldset>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" value="yes">
+                <label for="terms">I confirm that the information is correct.</label>
+                <span class="error" id="termsError"></span>
+            </div>
+
+            <p id="sellMessage" class="success-message" aria-live="polite"></p>
+
+            <div class="form-buttons">
+                <button type="submit" class="button">List Fruit</button>
+                <button type="reset" class="button button-light">Reset Form</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p><strong>Garden Fresh</strong> — A online fruit marketplace.</p>
+            <p>&copy; 2026 Garden Fresh.</p>
+        </div>
+    </footer>
+</body>
+</html>
