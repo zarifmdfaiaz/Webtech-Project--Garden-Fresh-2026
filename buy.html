@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Fresh | Buy Fruits</title>
+    
+<link rel="icon" type="image/png" href="css/image/garden-fresh-logo.png">
+
+    <link rel="stylesheet" href="css/01-base.css">
+<link rel="stylesheet" href="css/02-header-nav.css">
+<link rel="stylesheet" href="css/03-buttons.css">
+<link rel="stylesheet" href="css/04-home.css">
+<link rel="stylesheet" href="css/05-fruit-cards.css">
+<link rel="stylesheet" href="css/06-forms-filter.css">
+<link rel="stylesheet" href="css/07-cart.css">
+<link rel="stylesheet" href="css/08-payment.css">
+<link rel="stylesheet" href="css/09-content.css">
+<link rel="stylesheet" href="css/10-contact.css">
+<link rel="stylesheet" href="css/11-about.css">
+<link rel="stylesheet" href="css/12-footer.css">
+<link rel="stylesheet" href="css/13-responsive.css">
+<link rel="stylesheet" href="css/14-logo.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/buy.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+           
+
+<a class="logo" href="index.html" aria-label="Garden Fresh Home">
+    <img src="css/image/garden-fresh-logo.png" alt="Garden Fresh Logo">
+    <span>Garden Fresh</span>
+</a>
+
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a class="active" href="buy.html">Buy Fruits</a>
+                <a href="sell.html">Sell Fruits</a>
+                <a href="cart.html">Cart</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+               
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div class="section-heading">
+            <h1>Buy Fresh Fruits</h1>
+            <p>Choose fresh fruits from sellers across Bangladesh.</p>
+        </div>
+
+        <div class="filter-area">
+            <div class="form-group">
+                <label for="searchFruit">Search by fruit name</label>
+                <input
+                    type="search"
+                    id="searchFruit"
+                    placeholder="Example: Mango"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="maxPrice">Maximum price (Tk per kg)</label>
+                <input
+                    type="number"
+                    id="maxPrice"
+                    min="0"
+                    step="any"
+                    placeholder="Enter maximum price"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="sortPrice">Sort by price</label>
+                <select id="sortPrice">
+                    <option value="default">Default order</option>
+                    <option value="low">Lowest first</option>
+                    <option value="high">Highest first</option>
+                </select>
+            </div>
+        </div>
+
+        <p
+            id="buyMessage"
+            class="success-message"
+            aria-live="polite"
+        ></p>
+
+        <div id="fruitListings" class="fruit-grid"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p><strong>Garden Fresh</strong> — An online fruit marketplace.</p>
+            <p>&copy; 2026 Garden Fresh.</p>
+        </div>
+    </footer>
+</body>
+</html>
