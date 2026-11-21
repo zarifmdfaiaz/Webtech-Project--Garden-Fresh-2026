@@ -1,0 +1,24 @@
+
+
+.site-footer {
+    margin-top: 30px;
+    background-color: #203c29;
+    color: #ffffff;
+    padding: 25px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.site-footer a {
+    color: #d7efce;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
