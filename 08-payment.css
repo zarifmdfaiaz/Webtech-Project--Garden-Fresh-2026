@@ -1,0 +1,111 @@
+
+
+.payment-section {
+    margin-top: 25px;
+    padding: 22px;
+    border: 1px solid #dce5dc;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f7faf5, #ffffff);
+}
+
+.payment-section h2,
+.payment-section h3 {
+    color: #203c29;
+}
+
+.payment-choice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #dce5dc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.payment-choice:hover {
+    border-color: #8dbb8d;
+    background-color: #fbfdf9;
+}
+
+.payment-choice:has(input:checked) {
+    border-color: #287b3c;
+    background-color: #f0f8ed;
+}
+
+.payment-choice input[type="radio"] {
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: #287b3c;
+}
+
+.payment-choice span {
+    line-height: 1.4;
+}
+
+.payment-logo {
+    display: block;
+    width: 75px;
+    height: 35px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.payment-logo-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 66px;
+    height: 38px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.payment-logo-bkash {
+    background-color: #d12053;
+}
+
+.payment-logo-nagad {
+    background-color: #f07824;
+}
+
+.payment-logo-card {
+    background-color: #263b80;
+}
+
+.payment-details {
+    margin-top: 18px;
+    padding: 18px;
+    border: 1px solid #e0e7de;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.payment-details[hidden] {
+    display: none !important;
+}
+
+.payment-details h3 {
+    margin-top: 0;
+}
+
+.payment-notice {
+    padding: 12px 15px;
+    margin-top: 15px;
+    border-left: 4px solid #e99a24;
+    border-radius: 4px;
+    background-color: #fff8e9;
+    color: #5d4a24;
+    font-size: 14px;
+}

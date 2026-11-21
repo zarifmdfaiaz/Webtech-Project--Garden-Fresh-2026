@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Garden Fresh | Checkout</title>
+
+    <link rel="icon" type="image/png" href="css/image/garden-fresh-logo.png">
+
+    <link rel="stylesheet" href="css/01-base.css">
+    <link rel="stylesheet" href="css/02-header-nav.css">
+    <link rel="stylesheet" href="css/03-buttons.css">
+    <link rel="stylesheet" href="css/04-home.css">
+    <link rel="stylesheet" href="css/05-fruit-cards.css">
+    <link rel="stylesheet" href="css/06-forms-filter.css">
+    <link rel="stylesheet" href="css/07-cart.css">
+    <link rel="stylesheet" href="css/08-payment.css">
+    <link rel="stylesheet" href="css/09-content.css">
+    <link rel="stylesheet" href="css/10-contact.css">
+    <link rel="stylesheet" href="css/11-about.css">
+    <link rel="stylesheet" href="css/12-footer.css">
+    <link rel="stylesheet" href="css/13-responsive.css">
+    <link rel="stylesheet" href="css/14-logo.css">
+
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a class="logo" href="index.html" aria-label="Garden Fresh Home">
+                <img src="css/image/garden-fresh-logo.png" alt="Garden Fresh Logo">
+                <span>Garden Fresh</span>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="buy.html">Buy Fruits</a>
+                <a href="sell.html">Sell Fruits</a>
+                <a class="active" href="cart.html">Cart</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container section">
+
+        <div class="section-heading">
+            <h1>Checkout</h1>
+            <p>Review your fruits and enter your delivery information.</p>
+        </div>
+
+        <div class="contact-layout">
+
+            <section class="content-card">
+                <h2>Order Summary</h2>
+
+                <div id="cartItems"></div>
+
+                <hr>
+
+                <p>
+                    Subtotal:
+                    Tk <span id="cartSubtotal">0.00</span>
+                </p>
+
+                <p>
+                    Delivery Fee:
+                    Tk <span id="deliveryFee">0.00</span>
+                </p>
+
+                <h2>
+                    Total:
+                    Tk <span id="cartTotal">0.00</span>
+                </h2>
+
+                <a href="buy.html" class="button button-light">
+                    Continue Shopping
+                </a>
+            </section>
+
+            <form id="checkoutForm" class="form-card">
+
+                <fieldset>
+                    <legend>Delivery Information</legend>
+
+                    <div class="form-group">
+                        <label for="customerName">Full Name *</label>
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customer_name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number *</label>
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            name="customer_phone"
+                            placeholder="01XXXXXXXXX"
+                            pattern="01[3-9][0-9]{8}"
+                            title="Enter a valid 11-digit Bangladeshi mobile number."
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address *</label>
+                        <textarea
+                            id="deliveryAddress"
+                            name="delivery_address"
+                            rows="3"
+                            autocomplete="street-address"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryArea">City or Area *</label>
+                        <input
+                            type="text"
+                            id="deliveryArea"
+                            name="delivery_area"
+                            autocomplete="address-level2"
+                            required
+                        >
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="payment-section">
+                    <legend>Payment Method</legend>
+
+                    <label class="payment-choice" for="cod">
+                        <input
+                            type="radio"
+                            id="cod"
+                            name="payment_method"
+                            value="COD"
+                            checked
+                        >
+                        <span>Cash on Delivery (COD)</span>
+                    </label>
+
+                    <label class="payment-choice" for="bkash">
+                        <input
+                            type="radio"
+                            id="bkash"
+                            name="payment_method"
+                            value="bKash"
+                        >
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Bkash.webp"
+                            alt="bKash logo"
+                            class="payment-logo"
+                        >
+                        <span>bKash</span>
+                    </label>
+
+                    <label class="payment-choice" for="nagad">
+                        <input
+                            type="radio"
+                            id="nagad"
+                            name="payment_method"
+                            value="Nagad"
+                        >
+                        <img
+                            src="https://logotyp.us/file/nagad.svg"
+                            alt="Nagad logo"
+                            class="payment-logo"
+                        >
+                        <span>Nagad</span>
+                    </label>
+
+                    <label class="payment-choice" for="rocket">
+                        <input
+                            type="radio"
+                            id="rocket"
+                            name="payment_method"
+                            value="Rocket"
+                        >
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Rocket_mobile_banking_logo.svg"
+                            alt="Rocket logo"
+                            class="payment-logo"
+                        >
+                        <span>Rocket</span>
+                    </label>
+
+                    <label class="payment-choice" for="visa">
+                        <input
+                            type="radio"
+                            id="visa"
+                            name="payment_method"
+                            value="Visa"
+                        >
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa_2021.svg"
+                            alt="Visa logo"
+                            class="payment-logo"
+                        >
+                        <span>Debit or Credit Card</span>
+                    </label>
+
+                </fieldset>
+
+                <p
+                    id="orderMessage"
+                    class="success-message"
+                    aria-live="polite"
+                ></p>
+
+                <button type="submit" class="button">
+                    Confirm Order
+                </button>
+
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p><strong>Garden Fresh</strong> — An online fruit marketplace.</p>
+            <p>&copy; 2026 Garden Fresh.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

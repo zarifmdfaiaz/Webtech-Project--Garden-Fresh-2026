@@ -1,0 +1,40 @@
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #287b3c;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo span {
+    display: inline-block;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 22px;
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+}
